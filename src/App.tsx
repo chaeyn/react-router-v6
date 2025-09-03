@@ -1,3 +1,7 @@
-export default function App() {
-  return null;
+import Router from "./Router";
+
+function App() {
+  return <Router />;
 }
+
+export default App;
