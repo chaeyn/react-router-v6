@@ -4,6 +4,7 @@ import About from "./screens/About";
 import Home from "./screens/Home";
 import NotFound from "./screens/NotFound";
 import ErrorComponent from "./components/ErrorComponent";
+import User from "./screens/users/User";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,21 @@ const router = createBrowserRouter([
         path: "about",
         element: <About />,
       },
+      {
+        path: "users/:userId",
+        element: <User />,
+      }, // user/을 사용하지 않으면 users/:userId 방식 사용
+      // {
+      //   path: "users",
+      //   element: <UserPage />,
+      //   children: [
+      //     {
+      //       path: ":userId",
+      //       element: <User />,
+      //     },
+      //   ],
+      // }
+      // /users를 사용하는 경우, /users 안의 페이지가 많은 경우 사용
     ],
     errorElement: <NotFound />,
     // url과 매칭되지 않은 경우 NotFound 반환
